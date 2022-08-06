@@ -28,9 +28,15 @@
                             <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">ABOUT ME</a></li>
                             <li class="nav-item"><a class="nav-link" href="#education">EDUCATION</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact-me">CONTACT</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
                         </ul>
                     </div>
+                </div>
+                <!-- Menu Icon -->
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
             </nav>
         </header>
@@ -54,6 +60,117 @@
                     </div>
                 </div>
             </section>
+
+            <!-- About Section -->
+            <section class="about" id="about">
+                <h2 class="heading">ABOUT</h2>
+                <div class="about-content">
+                    <div class="about-details">
+                        <span class="abt-span">Basic Information</span>
+                        <pre><strong>AGE:</strong>              18</pre>
+                        <pre><strong>EMAIL:</strong>            akhurana22@myseneca.ca</pre>
+                        <pre><strong>LANGUAGE:</strong>         English, Hindi</pre>
+                        <pre><strong>CLASS SECTION:</strong>    NDD</pre>
+                        <pre><strong>STUDENT ID:</strong>       145282216</pre>
+                        <pre><strong>INSTRUCTOR:</strong>       Mr. Muath Alzghool</pre>
+                    </div>
+                    <div class="about-text">
+                        <span class="abt-span">About Me and Academic Honesty</span>
+                        <p>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare that no part of this assignment has been distributed to other students.</p>
+                        <span><strong>Date: </strong></span><p>Aug 5, 2022</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education" id="education">
+                <h2 class="heading">EDUCATION</h2>
+                <div class="education-content">
+                    <div class="education-box">
+                        <i class="uil uil-backpack"></i>
+                        <h2>Completed Schooling, OPG World School</h2>
+                        <p>July 2021</p>
+                    </div>
+                    <div class="education-box">
+                        <i class="uil uil-university"></i>
+                        <h2>Computer Programming and Analysis, Seneca College</h2>
+                        <p>January 2022 - April 2024</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Form Section -->
+            <section class="contact" id="contact">
+                <h2 class="heading">CONTACT ME</h2>
+                <div class="contact-content">
+                    <form action="https://httpbin.org/post" class="contact-form" id="contact-form" method="POST">
+                        <!-- Name -->
+                        <input type="text" placeholder="Your Name" class="name" required>
+
+                        <!-- Email -->
+                        <input type="email" name="" id="" placeholder="Email address..." class="email" required>
+
+                        <!-- Address -->
+                        <textarea name="" id="" cols="30" rows="2" placeholder="Enter your full address" class="address" required></textarea>
+
+                        <!-- Datalist for cities in Canada -->
+                        <input type="text" id="city" name="city" list="suggestions" placeholder="City"/>
+                        <datalist id="suggestions">
+                            <option label="Barrie" value="Barrie"></option>
+                            <option label="Calgary" value="Calgary"></option>
+                            <option label="Charlottetown" value="Charlottetown"></option>
+                            <option label="Chibougamau" value="Chibougamau"></option>
+                            <option label="Chilliwack" value="Chilliwack"></option>
+                            <option label="Cold Lake" value="Cold Lake"></option>
+                            <option label="Dorval" value="Dorval"></option>
+                            <option label="Edmonton" value="Edmonton"></option>
+                            <option label="Flin Flon" value="Flin Flon"></option>
+                            <option label="Hamilton" value="Hamilton"></option>
+                            <option label="Iqualuit" value="Iqualuit"></option>
+                            <option label="Ottawa" value="Ottawa"></option>
+                            <option label="Miramichi" value="Miramichi"></option>
+                            <option label="Montreal" value="Montreal"></option>
+                            <option label="Red Deer" value="Red Deer"></option>
+                            <option label="Scarborough" value="Scarborough"></option>
+                            <option label="St. John" value="St. John"></option>
+                            <option label="St. John's" value="St. John's"></option>
+                            <option label="Toronto" value="Toronto"></option>
+                            <option label="Vancouver" value="Vancouver"></option>
+                            <option label="Whitehorse" value="Whitehorse"></option>
+                            <option label="Winnipeg" value="Winnipeg"></option>
+                            <option label="Yellowknife" value="Yellowknife"></option>
+                        </datalist>
+
+                        <!-- Purpose of this message -->
+                        <p>Please select your favorite Web language:</p>
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+
+                        <!-- Message -->
+                        <textarea name="" id="" cols="30" rows="5" placeholder="Enter your message..." class="address" required></textarea>
+
+                        <!-- Selection -->
+                        <select name="what-to-do" id="what-to-do" size=5>
+                            <option value="1"> Drink Coffee </option>
+                            <option value="2" selected> Read A Book </option>
+                            <option value="3"> Take A Walk </option>
+                            <option value="4"> Buy A Bagel </option>
+                            <option value="5"> Watch TV    </option>
+                            <option value="6"> Write a test </option>
+                         </select>                       
+
+                        <!-- Buttons -->
+                        <div class="form-btns">
+                            <input type="submit" value="Send" class="form-btn">
+                            <input type="reset" value="Clear" class="form-btn">
+                        </div>
+                    </form>
+                </div>
+            </section>
         </main>
 
         <!-- Webpage Footer -->
@@ -68,5 +185,8 @@
         </footer>
 
     </div>
+
+    <!-- JavaScript file -->
+    <script src="./Assets/script.js"></script>
 </body>
 </html>
