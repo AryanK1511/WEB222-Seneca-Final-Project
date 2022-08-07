@@ -238,6 +238,10 @@ button, input {
     color: #77D5D5;
 }
 
+.uil-import {
+    padding-right: 10px;
+}
+
 /* ==================== About Page ==================== */
 .about {
     background-color: #811576;
