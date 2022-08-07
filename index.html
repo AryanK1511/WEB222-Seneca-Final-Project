@@ -55,8 +55,8 @@
                         <p>I am an international student from India and am Pursuing an advanced Computer Programming and Analysis at Seneca College. I am passionate about Computer Science and Software Development</p>
                     </div>
                     <div class="home-btns">
-                        <button class="home-btn"><i class="uil uil-import"></i><a download="ARYAN KHURANA - RESUME.pdf" href="./Assets/Files/ARYAN KHURANA - RESUME.pdf"> Resume</a></button>
-                        <button class="home-btn"><a href="#contact">Contact Me</a></button>
+                        <button class="btn"><i class="uil uil-import"></i><a download="ARYAN KHURANA - RESUME.pdf" href="./Assets/Files/ARYAN KHURANA - RESUME.pdf"> Resume</a></button>
+                        <button class="btn"><a href="#contact">Contact Me</a></button>
                     </div>
                 </div>
             </section>
@@ -105,16 +105,20 @@
                 <div class="contact-content">
                     <form action="https://httpbin.org/post" class="contact-form" id="contact-form" method="POST">
                         <!-- Name -->
-                        <input type="text" placeholder="Your Name" class="name" required>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" placeholder="Your Name" class="name format" required>
 
                         <!-- Email -->
-                        <input type="email" name="" id="" placeholder="Email address..." class="email" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="" placeholder="Email address..." class="email format" required>
 
                         <!-- Address -->
-                        <textarea name="" id="" cols="30" rows="2" placeholder="Enter your full address" class="address" required></textarea>
+                        <label for="address">Current Address:</label>
+                        <textarea name="address" id="" cols="30" rows="2" placeholder="Enter your full address" class="address" required></textarea>
 
                         <!-- Datalist for cities in Canada -->
-                        <input type="text" id="city" name="city" list="suggestions" placeholder="City"/>
+                        <label for="name">City:</label>
+                        <input class="format" type="text" id="city" name="city" list="suggestions" placeholder="City"/>
                         <datalist id="suggestions">
                             <option label="Barrie" value="Barrie"></option>
                             <option label="Calgary" value="Calgary"></option>
@@ -142,31 +146,38 @@
                         </datalist>
 
                         <!-- Purpose of this message -->
-                        <p>Please select your favorite Web language:</p>
-                        <input type="radio" id="html" name="fav_language" value="HTML">
-                        <label for="html">HTML</label><br>
-                        <input type="radio" id="css" name="fav_language" value="CSS">
-                        <label for="css">CSS</label><br>
-                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-                        <label for="javascript">JavaScript</label>
+                        <br>
+                        <div class="radio-btns">
+                            <label for="purpose">What is the purpose of this message?</label><br><br>
+                            <input type="radio" id="question" name="purpose" value="question">
+                            <label for="question">Question</label><br>
+                            <input type="radio" id="comment" name="purpose" value="comment">
+                            <label for="comment">Comment</label><br>
+                            <input type="radio" id="hiring" name="purpose" value="hiring">
+                            <label for="hiring">Hiring</label>
+                        </div>
+                        <br>
 
                         <!-- Message -->
-                        <textarea name="" id="" cols="30" rows="5" placeholder="Enter your message..." class="address" required></textarea>
+                        <label for="message">Message for me:</label>
+                        <textarea name="message" id="" cols="30" rows="5" placeholder="Enter your message..." class="address" required></textarea>
 
-                        <!-- Selection -->
-                        <select name="what-to-do" id="what-to-do" size=5>
-                            <option value="1"> Drink Coffee </option>
-                            <option value="2" selected> Read A Book </option>
-                            <option value="3"> Take A Walk </option>
-                            <option value="4"> Buy A Bagel </option>
-                            <option value="5"> Watch TV    </option>
-                            <option value="6"> Write a test </option>
+                        <!-- Field of work selection -->
+                        <label for="field">What is your field of work?</label>
+                        <select name="field" id="field" size=5>
+                            <option value="1" selected>Engineering, Manufacturing, & Technology</option>
+                            <option value="2">Business, Management, & Administration</option>
+                            <option value="3">Communications & Information Systems</option>
+                            <option value="4">Agriculture, Food, & Natural Resources</option>
+                            <option value="5">Health Science Technology</option>
+                            <option value="6">Human Services</option>
+                            <option value="6">Other</option>
                          </select>                       
 
                         <!-- Buttons -->
                         <div class="form-btns">
-                            <input type="submit" value="Send" class="form-btn">
-                            <input type="reset" value="Clear" class="form-btn">
+                            <input type="submit" value="Send" class="btn">
+                            <input type="reset" value="Clear" class="btn">
                         </div>
                     </form>
                 </div>
@@ -175,12 +186,13 @@
 
         <!-- Webpage Footer -->
         <footer class="footer">
-            <div class="footer-social">
-                <div class="footer-social-links">
-                    <a href="" target="_blank" class="footer-social-link"><i class="uil uil-twitter"></i></a>
-                    <a href="" target="_blank" class="footer-social-link"><i class="uil uil-instagram"></i></a>
-                    <a href="" target="_blank" class="footer-social-link"><i class="uil uil-github"></i></a>
-                </div>
+            <h4>Aryan Khurana</h4>
+            <p>I created this website as a part of my Final Project for WEB222 Course that I took as a second semester student at Seneca College, Toronto<br> <span>Copyright&copy; 2022</span></p>
+
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/aryan-khurana-239684229/" target="_blank"><i class="uil uil-linkedin"></i></a>
+                <a href="https://github.com/AryanK1511" target="_blank"><i class="uil uil-github"></i></a>
+                <a href="https://twitter.com/AryanK1511" target="_blank"><i class="uil uil-twitter"></i></a>
             </div>
         </footer>
 
