@@ -1,8 +1,6 @@
+// ==================== Code for responsive navbar ====================
 let menu = document.querySelector('.menu-icon');
 let navbar = document.querySelector('.nav-links');
-let hiringRadioButton = document.getElementById('hiring');
-let questionRadioButton = document.getElementById('question');
-let commentRadioButton = document.getElementById('comment');
 
 // Making the navbar responsive using a menu icon
 menu.addEventListener('click', function() {
@@ -16,7 +14,11 @@ window.onscroll = () => {
     menu.classList.remove('move');
 }
 
-// Code for getting the pay rate input field when hiring option is chosen
+// ==================== Code for getting the pay rate input field when hiring option is chosen ====================
+let hiringRadioButton = document.getElementById('hiring');
+let questionRadioButton = document.getElementById('question');
+let commentRadioButton = document.getElementById('comment');
+
 // Variable to make sure that the form is only printed once no matter how many times the hiring button is clicked
 var clicked = 0;
 
@@ -85,4 +87,113 @@ function deletePayRateInput() {
     div.removeChild(b3);
     div.removeChild(input);
     div.removeChild(label);
+}
+
+// ==================== Form Validation Code ====================
+let messages = [];
+const form = document.getElementById('contact-form');
+const errorElement = document.getElementById('error');
+
+form.addEventListener('submit', (e) => {
+    messages = [];
+
+    // Calling all the validation functions
+    validateName();
+    validateEmail();
+    validateAddress();
+    validateCity();
+    validateMessage();
+
+    // Only validating the pay rate if hiring option was clicked
+    if (clicked > 0) {
+        payRateValidation();
+    }
+
+    // Displaying the errors
+    if (messages.length > 0) {
+        e.preventDefault();
+        errorElement.innerHTML = `
+        <h3>Incorrect Inputs Provided:</h3>
+        <pre>${messages.join('\r\n')}</pre>
+        `;
+    }
+})
+
+form.addEventListener('reset', (e) => {
+    messages = [];
+    errorElement.innerHTML = '';
+})
+
+// Validation for the name input
+function validateName() {
+    const inputName = document.getElementById('name');
+    if(nullChecker(inputName, 'Name')) {
+        areAlphabets(inputName, '- Name should be valid - All characters should be alphabetical');
+    }
+}
+
+// Validation for email input
+function validateEmail() {
+    const email = document.getElementById('email');
+    if (nullChecker(email, 'Email')) {
+        let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (!(email.value.match(validRegex))) {
+            messages.push("- Email Address is Invalid");
+        }
+    }    
+}
+
+// Validation for address
+function validateAddress() {
+    const address = document.getElementById('address');
+    if (nullChecker(address, 'Address')) {
+        if (address.value.length < 10) {
+            messages.push("- Address should be atleast 10 characters long");
+        }
+    }
+}
+
+// Validation for city
+function validateCity() {
+    const city = document.getElementById('city');
+    if(nullChecker(city, 'City')) {
+        areAlphabets(city, '- City should be valid - All characters should be alphabetical');
+    }
+}
+
+// Validation for message
+function validateMessage() {
+    const message = document.getElementById('message');
+    if (nullChecker(message, 'Message')) {
+        if (address.value.length < 10) {
+            messages.push("- Message should be atleast 5 characters long");
+        }
+    }
+}
+
+// Validation for the pay rate input field
+function payRateValidation() {
+    let payRateInput = document.getElementById('hiring-rate-input');
+    if (payRateInput.value <= 0) {
+        messages.push("- Enter an appropriate expected hourly pay rate")
+    }
+}
+
+// Ensures that the element is not empty
+function nullChecker(element, elementName) {
+    result = true;
+    if (element.value === '' || element.value == null) {
+        messages.push(`- ${elementName} is required`);
+        result = false;
+    }
+
+    return result;
+}
+
+// Ensures that all the characters in the input field are alphabets
+function areAlphabets(element, message) {
+    let validRegex = /^[A-Za-z\s]+$/;
+    if (!(element.value.match(validRegex))) {
+        messages.push(message);
+    }
 }

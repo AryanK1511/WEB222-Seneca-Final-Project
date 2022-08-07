@@ -373,6 +373,17 @@ form .btn {
     margin-bottom: 50px;
 }
 
+#error pre {
+    color: #DF4759;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+#error h3 {
+    color: #DF4759;
+    margin-bottom: 20px;
+}
+
 /* =================== Footer ==================== */
 .footer{
     background: #0F0119;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>ARYAN KHURANA || WEB222 Final Project</title>
 
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -106,15 +106,16 @@
                     <form action="https://httpbin.org/post" class="contact-form" id="contact-form" method="POST">
                         <!-- Name -->
                         <label for="name">Name:</label>
-                        <input type="text" name="name" placeholder="Your Name" class="name format" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="name format">
 
                         <!-- Email -->
                         <label for="email">Email:</label>
-                        <input type="email" name="email" id="" placeholder="Email address..." class="email format" required>
+                        <!-- email type wasnt used because form is validated using js so it wasn't needed -->
+                        <input type="text" name="email" id="email" placeholder="Email address..." class="email format">
 
                         <!-- Address -->
                         <label for="address">Current Address:</label>
-                        <textarea name="address" id="" cols="30" rows="2" placeholder="Enter your full address" class="address" required></textarea>
+                        <textarea name="address" id="address" cols="30" rows="2" placeholder="Enter your full address" class="address"></textarea>
 
                         <!-- Datalist for cities in Canada -->
                         <label for="name">City:</label>
@@ -145,6 +146,10 @@
                             <option label="Yellowknife" value="Yellowknife"></option>
                         </datalist>
 
+                        <!-- Postal Code -->
+                        <!-- <label for="pCode">Postal Code:</label>
+                        <input type="text" pattern="/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/" id="pCode" class="format" placeholder="Postal Code"> -->
+
                         <!-- Purpose of this message -->
                         <br>
                         <div class="radio-btns">
@@ -160,7 +165,7 @@
 
                         <!-- Message -->
                         <label for="message">Message for me:</label>
-                        <textarea name="message" id="" cols="30" rows="5" placeholder="Enter your message..." class="address" required></textarea>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter your message..." class="address"></textarea>
 
                         <!-- Field of work selection -->
                         <label for="field">What is your field of work?</label>
@@ -179,6 +184,7 @@
                             <input type="submit" value="Send" class="btn">
                             <input type="reset" value="Clear" class="btn">
                         </div>
+                        <div id="error"></div>
                     </form>
                 </div>
             </section>
