@@ -1,3 +1,10 @@
+/*
+Name: Aryan Khurana
+Student Number: 145282216
+Email: akhurana22@myseneca.ca
+Section: NDD
+*/
+
 // ==================== Code for responsive navbar ====================
 let menu = document.querySelector('.menu-icon');
 let navbar = document.querySelector('.nav-links');
@@ -63,6 +70,7 @@ function generatePayRateInput() {
     const node2 = document.createElement("input");
     node2.id = 'hiring-rate-input';
     node2.type = 'number';
+    node2.step = '0.1';
     node2.placeholder = 'Hourly Pay';
     node2.classList.add('format')
 

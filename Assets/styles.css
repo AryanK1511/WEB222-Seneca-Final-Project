@@ -1,3 +1,10 @@
+/*
+Name: Aryan Khurana
+Student Number: 145282216
+Email: akhurana22@myseneca.ca
+Section: NDD
+*/
+
 /* ==================== Global CSS ==================== */
 * {
     margin: 0;
@@ -377,11 +384,18 @@ form .btn {
     color: #DF4759;
     margin-bottom: 20px;
     font-weight: 200;
+    padding: 0 15px;
+}
+
+#error {
+    background: #0F0119;
+    margin-bottom: 20px;
 }
 
 #error h3 {
-    color: #DF4759;
+    color: #FFC18F;
     margin-bottom: 20px;
+    padding: 15px 15px 0 15px;
 }
 
 /* =================== Footer ==================== */
