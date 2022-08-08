@@ -19,6 +19,7 @@ html {
 
 html, body {
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 ul {
@@ -403,7 +404,7 @@ form .btn {
 }
 
 /* =================== Footer ==================== */
-.footer{
+.footer {
     background: #0F0119;
     width: 100%;
     text-align: center;
@@ -426,7 +427,7 @@ form .btn {
     font-weight: 600;
 }
 
-.icons .uil{
+.icons .uil {
     font-size: 30px;
     color: #CE205B;
     margin: 0 13px;
@@ -439,7 +440,8 @@ form .btn {
     transition: 0.6s;
 }
 
-/* Making the website responsive using media queries */
+/* ==================== Making the website responsive using media queries ==================== */
+/* Smaller Size */
 @media (max-width: 850px) {
     .menu-icon {
         display: flex;
@@ -462,28 +464,71 @@ form .btn {
         padding: 50px 20px;
         z-index: 300;
     }
+
     .open-menu {
         right: 0;
         transition: 0.5s;
     }
+
     .nav-link {
         display: block;
         margin: 1rem 0;
     }
+
     .home-text h3 {
         font-size: 1.3rem;
     }
+
     .home-text h2 {
         font-size: 4rem;
         line-height: 6rem;
     }
+
     .home-text p {
         font-size: 0.75rem;
     }
+
     .about-content {
         grid-template-columns: 1fr;
     }
+
     .heading {
         font-size: 4rem;
+    }
+}
+
+/* Even Smaller Size */
+@media (max-width: 550px) {
+    .home-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .home-text h2 {
+        font-size: 2.3rem;
+        line-height: 3.2rem;
+    }
+
+    .home-text p {
+        font-size: 0.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 3.2rem;
+    }
+
+    .about-text p {
+        font-size: 0.5rem;
+    }
+
+    .about-details pre {
+        font-size: 0.9rem;
+    }
+    
+    .abt-span {
+        font-size: 1.5rem;
     }
 }
