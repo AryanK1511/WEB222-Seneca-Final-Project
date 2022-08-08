@@ -110,6 +110,7 @@ form.addEventListener('submit', (e) => {
     validateEmail();
     validateAddress();
     validateCity();
+    validatePostalCode();
     validateMessage();
 
     // Only validating the pay rate if hiring option was clicked
@@ -166,6 +167,15 @@ function validateCity() {
     const city = document.getElementById('city');
     if(nullChecker(city, 'City')) {
         areAlphabets(city, '- City should be valid - All characters should be alphabetical');
+    }
+}
+
+// Validation for postal code
+function validatePostalCode() {
+    let postalCode = document.getElementById('pCode');
+    let validRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
+    if (!(postalCode.value.match(validRegex))) {
+        messages.push("- Invalid Postal Code");
     }
 }
 
